@@ -1,0 +1,13 @@
+<ng-container cdkDropListGroup>
+<div fxLayout> 
+<mat-list role="list" cdkDropList (cdkDropListDropped)="onDropListItem($event)" [cdkDropListData]="toDoList">
+  <mat-list-item *ngFor="let item of toDoList"  cdkDrag>{{item}}</mat-list-item>
+</mat-list>
+
+
+<mat-list role="list" cdkDropList (cdkDropListDropped)="onDropListItem($event)" [cdkDropListData]="completed">
+
+    <mat-list-item *ngFor="let item of completed"  cdkDrag>{{item}}</mat-list-item>
+</mat-list>
+</div>
+</ng-container>
